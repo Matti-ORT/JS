@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Exercice2</title>
+  </head>
+
+  <body>
+    <button id="p" class="btn">Pierre</button>
+    <button id="f" class="btn">Feuille</button>
+    <button id="c" class="btn">Ciseaux</button>
+
+    <h5 id="message"></h5>
+    <p id="score"></p>
+  </body>
+
+  <script>
+    // Les Fonctions //
+
+    
+    //Fonction du resultat
+    function resultat(moi, ordi) {
+      if (moi === ordi) {
+        return "Egalite";
+      } else if (
+        (moi === "Pierre" && ordi === "Ciseaux") ||
+        (moi === "Ciseaux" && ordi === "Feuille") ||
+        (moi === "Feuille" && ordi === "Pierre")
+      ) {
+        return "tu as ganier";
+      } else {
+        return "tu as perdu";
+      }
+    }
+    
+    // les scores
+    let Zscore = { gagnier: 0, perdue: 0, egalite: 0 };
+    function score(result) {
+      if(result === "tu as ganier"){
+        return Zscore.gagnier++;
+      }
+      else if(result === "tu as perdu"){
+        return Zscore.perdue++;
+      }
+      else{
+        return Zscore.egalite++;
+      }
+    }
+
+    function afficherScore() {
+      return `Gagner: ${Zscore.gagnier} | Perdu: ${Zscore.perdue} | Égalité: ${Zscore.egalite}`;
+    }
+        
+
+    // tableau des choix //
+    let ChiFouMi = ["Pierre", "Feuille", "Ciseaux"];
+    // message recuperer par id message
+    let messageDiv = document.getElementById("message");
+    // Affichage de score
+    let messageScore = document.getElementById("score");
+
+    // les boutons //
+
+    // bouton pierre
+    let buttonP = document.getElementById("p");
+    buttonP.addEventListener("click", function () {
+      let ale = ChiFouMi[Math.floor(Math.random() * ChiFouMi.length)];
+      let resu = resultat("Pierre", ale);
+      score(resu);
+      messageDiv.textContent =
+        "tu as choisi Pierre et l'ordiantaeur a choisi " + ale + " " + resu + " " +score(resu);
+        messageScore.textContent = afficherScore();
+    });
+    // bouton feuille
+    let buttonF = document.getElementById("f");
+    buttonF.addEventListener("click", function () {
+      let ale = ChiFouMi[Math.floor(Math.random() * ChiFouMi.length)];
+      let resu = resultat("Feuille", ale);
+      score(resu);
+      messageDiv.textContent =
+        "tu as choisi Feuille et l'ordiantaeur a choisi " + ale + " " + resu+ " " +score(resu);
+        messageScore.textContent = afficherScore();
+    });
+    // bouton ciseaux
+    let buttonC = document.getElementById("c");
+    buttonC.addEventListener("click", function () {
+      let ale = ChiFouMi[Math.floor(Math.random() * ChiFouMi.length)];
+      let resu = resultat("Ciseaux", ale);
+      score(resu);
+      messageDiv.textContent =
+        "tu as choisi Ciseaux et l'ordiantaeur a choisi " + ale + " " + resu + " " +score(resu);
+        messageScore.textContent = afficherScore();
+    });
+  </script>
+</html>
