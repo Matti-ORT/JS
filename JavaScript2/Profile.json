@@ -1,0 +1,8 @@
+{
+    "nom": "Matti AL-HUSSAN",
+    "email": "matti@ort.fr",
+    "poste": "Développeur JavaScript",
+    "adresse": "147 chem. 69",
+    "summary": "Passionné par le développement web",
+    "competences": ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Git"]
+}

@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+#cv {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+#title {
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+}
+#subtitle {
+  color: #7f8c8d;
+}
+#profile, #infos, #summary {
+  background: #ecf0f1;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+#skills {
+  list-style: none;
+  padding: 0;
+}
+#skills li {
+  background: #3498db;
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+/* Section Profil GitHub */
+#github {
+  background: #f5f5f5;
+  border: 1px solid #d1d5da;
+  border-radius: 8px;
+  padding: 18px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(44,62,80,0.07);
+}
+#github h3 {
+  color: #24292e;
+  margin-bottom: 10px;
+}
+#github p {
+  margin: 6px 0;
+  color: #333;
+}
+#github a {
+  color: #0366d6;
+  text-decoration: none;
+  font-weight: bold;
+}
+#github a:hover {
+  text-decoration: underline;
+}
+/* Responsive CSS */
+@media (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+  #cv {
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  #title {
+    font-size: 1.5em;
+    padding-bottom: 5px;
+  }
+  #subtitle {
+    font-size: 1.1em;
+  }
+  #profile, #infos, #summary {
+    padding: 10px;
+    margin: 10px 0;
+  }
+  #skills li {
+    padding: 8px;
+    font-size: 0.95em;
+  }
+}
